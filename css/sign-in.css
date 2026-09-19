@@ -1,0 +1,195 @@
+@font-face {
+  font-family: "Nettflix Sans";
+  src: url("../assets/fonts/nettflix-sans-variable.woff2") format("woff2");
+}
+
+:root {
+  --red: #e50914;
+  --red-hover: #c11119;
+  --muted: #8c8c8c;
+  --field-bg: rgba(22, 22, 22, 0.75);
+  --field-border: #505050;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #fff;
+  font-family: "Nettflix Sans", "Helvetica Neue", sans-serif;
+  background: #000;
+}
+
+.signin-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-image: radial-gradient(ellipse 90% 55% at 50% 0, rgba(105, 12, 19, 0.58) 0, rgba(35, 4, 7, 0.85) 45%, #000 85%);
+}
+
+.header {
+  padding: 24px;
+}
+
+.logo {
+  display: block;
+  width: 128px;
+}
+
+.signin-card {
+  flex: 1;
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
+  padding: 32px 16px 80px;
+}
+
+.card-title {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.card-subtitle {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 28px;
+}
+
+.email-capture-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.email-capture-input {
+  width: 100%;
+  padding: 16px;
+  font: inherit;
+  color: #fff;
+  background: var(--field-bg);
+  border: 1px solid var(--field-border);
+  border-radius: 4px;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.email-capture-input::placeholder {
+  color: var(--muted);
+}
+
+.email-capture-input:focus {
+  outline: none;
+  border-color: #fff;
+  background: #161616;
+}
+
+.singin-card-submit {
+  width: 100%;
+  padding: 14px 24px;
+  font: inherit;
+  font-weight: 600;
+  color: #fff;
+  background: var(--red);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.singin-card-submit:hover {
+  background: var(--red-hover);
+}
+
+.captcha-note {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.footer {
+  padding: 48px 24px;
+  background: #000000;
+  border-top: 1px solid #1a1a1a;
+}
+
+a {
+  color: inherit;
+}
+
+.footer-container {
+  max-width: 1152px;
+  margin: 0 auto;
+}
+
+.footer-top {
+  margin-bottom: 32px;
+  font-size: 15px;
+  color: #999;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px 32px;
+  margin-bottom: 16px;
+  font-size: 12px;
+  color: #999;
+}
+
+.footer-link-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-links a {
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  font-size: 12px;
+  color: #71717a;
+}
+
+@media (min-width: 640px) {
+  .card-title {
+    font-size: 33px;
+  }
+
+  .card-subtitle {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  .header {
+    padding: 28px 64px 16px;
+  }
+
+  .logo {
+    width: 224px;
+  }
+
+  .footer {
+    padding: 48px 64px;
+  }
+
+  .footer-links {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1536px) {
+  .signin-card {
+    max-width: 480px;
+  }
+
+  .footer-container {
+    max-width: 1280px;
+  }
+}
